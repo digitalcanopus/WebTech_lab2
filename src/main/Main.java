@@ -11,11 +11,11 @@ public class Main {
 		
 		ApplianceService service = ServiceFactory.getInstance().getApplianceService();
 
-        List<Appliance> kettles = service.findByApplianceType(Kettle.class);
-        List<Appliance> cheapest = service.findTheCheapestAppliance();
+        	List<Appliance> kettles = service.findByApplianceType(Kettle.class);
+        	List<Appliance> cheapest = service.findTheCheapestAppliance();
 
-        PrintInfo.print(kettles);
-        System.out.println("***");
-        PrintInfo.print(cheapest);
+        	PrintInfo.print(kettles);
+        	System.out.println("***");
+        	PrintInfo.print(cheapest);
 	}
 }
