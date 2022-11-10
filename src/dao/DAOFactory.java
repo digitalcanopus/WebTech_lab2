@@ -5,7 +5,7 @@ package dao;
  */
 public final class DAOFactory {
 	
-	private static final DAOFactory instance = new DAOFactory();
+    private static final DAOFactory instance = new DAOFactory();
     private final ApplianceDAO applianceDAO = new ApplianceDAOImpl();
 
     private DAOFactory() { }
