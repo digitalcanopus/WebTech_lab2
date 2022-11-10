@@ -11,39 +11,39 @@ public class Appliance {
 	
 	public Appliance() {
 		
-        this.price = 0;
-        this.powerConsumption = 0;
-        this.color = "";
-    }
+        	this.price = 0;
+        	this.powerConsumption = 0;
+        	this.color = "";
+    	}
 	
 	public Appliance(Appliance appliance) {
 		
-        this.price = appliance.getPrice();
-        this.powerConsumption = appliance.getPowerConsumption();
-        this.color = appliance.getColor();
-    }
+        	this.price = appliance.getPrice();
+        	this.powerConsumption = appliance.getPowerConsumption();
+        	this.color = appliance.getColor();
+    	}
 
-    public Appliance(int price, int powerConsumption, String color) {
+    	public Appliance(int price, int powerConsumption, String color) {
     	
-        this.price = price;
-        this.powerConsumption = powerConsumption;
-        this.color = color;
-    }
+        	this.price = price;
+        	this.powerConsumption = powerConsumption;
+        	this.color = color;
+    	}
 
-    public Appliance(Node appliance) {
+    	public Appliance(Node appliance) {
     	
-        NodeList nodes = appliance.getChildNodes();
-        for (int i = 0; i < nodes.getLength(); i++) {
-            String field = nodes.item(i).getNodeName();
-            String value = nodes.item(i).getTextContent();
+		NodeList nodes = appliance.getChildNodes();
+		for (int i = 0; i < nodes.getLength(); i++) {
+		    String field = nodes.item(i).getNodeName();
+		    String value = nodes.item(i).getTextContent();
 
-            switch (field) {
-                case "price" -> price = Integer.parseInt(value);
-                case "powerConsumption" -> powerConsumption = Integer.parseInt(value);
-                case "color" -> color = value;
-            }
-        }
-    }
+		    switch (field) {
+			case "price" -> price = Integer.parseInt(value);
+			case "powerConsumption" -> powerConsumption = Integer.parseInt(value);
+			case "color" -> color = value;
+		    }
+		}
+    	}
 
     public int getPrice() {  	
         return this.price;
@@ -58,8 +58,7 @@ public class Appliance {
     }
 
     @Override
-    public String toString() {
-    	
+    public String toString() {    	
         return "price=" + price + "\n" + "powerConsumption=" + powerConsumption + "\n" + "color=" + color + "\n";
     }
 }
